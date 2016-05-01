@@ -3,17 +3,21 @@ Writing a bot using hubot in javascript that runs server side that integrates wi
 
 ```
 sudo su
-mkdir -p /root/chatbot && cd /root/chatbot
 apt-get update
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 apt-get install nodejs -y
 npm install -g yo generator-hubot
+mkdir -p /root/chatbot
 mkdir -p /root/.config/configstore/
 chmod g+rwx /root /root/.config /root/.config/configstore /root/chatbot
+cd /root/chatbot
 yo hubot
 rm -rf node_modules/
 rm package.json
-**Copy package json from github**
+rm external-scripts.json
+**Copy package.json from github into chatbot**
 npm install && npm update
-**Copy scripts folder from github**
+**Copy external-scripts.json from github***
+**Copy describe-instance.js from github into scripts**
+**Copy i-love-you.js from github into scripts**
 ```
