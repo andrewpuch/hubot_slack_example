@@ -17,7 +17,7 @@ yo hubot
 rm -rf node_modules/
 rm package.json external-scripts.json
 cp /root/hubot_slack_example/package.json /root/chatbot/package.json
-npm install && npm update
+npm install
 cp /root/hubot_slack_example/external-scripts.json /root/chatbot/
 cp /root/hubot_slack_example/config-sample.json /root/chatbot/config.json
 cp /root/hubot_slack_example/describe-instance.js /root/chatbot/scripts/
