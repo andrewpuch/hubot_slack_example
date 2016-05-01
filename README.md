@@ -5,8 +5,9 @@ Writing a bot using hubot in javascript that runs server side that integrates wi
 sudo su
 apt-get update
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-apt-get install nodejs -y
+apt-get install nodejs git -y
 npm install -g yo generator-hubot
+git clone https://github.com/andrewpuch/hubot_slack_example.git
 mkdir -p /root/chatbot
 mkdir -p /root/.config/configstore/
 chmod g+rwx /root /root/.config /root/.config/configstore /root/chatbot
@@ -15,12 +16,12 @@ yo hubot
 rm -rf node_modules/
 rm package.json
 rm external-scripts.json
-**Copy package.json from github into chatbot**
+cp -f /root/hubot_slack_example/package.json /root/chatbot/package.json
 npm install && npm update
-**Copy external-scripts.json from github***
-**Copy describe-instance.js from github into scripts**
-**Copy i-love-you.js from github into scripts**
-**Copy config-sample.json from github to config.json**
+cp -f /root/hubot_slack_example/external-scripts.json /root/chatbot/
+cp /root/hubot_slack_example/config-sample.json /root/chatbot/config.json
+cp /root/hubot_slack_example/describe-instance.js /root/chatbot/scripts/
+cp /root/hubot_slack_example/i-love-you.js /root/chatbot/scripts/
 
 HUBOT_ADAPTER=slack HUBOT_SLACK_TOKEN=[TOKEN] bin/hubot
 ```
