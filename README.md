@@ -20,4 +20,7 @@ npm install && npm update
 **Copy external-scripts.json from github***
 **Copy describe-instance.js from github into scripts**
 **Copy i-love-you.js from github into scripts**
+**Copy config-sample.json from github to config.json**
+
+HUBOT_ADAPTER=slack HUBOT_SLACK_TOKEN=[TOKEN] bin/hubot
 ```
