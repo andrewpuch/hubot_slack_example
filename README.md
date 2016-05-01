@@ -1,4 +1,4 @@
-# Hubot Slack Example
+# Hubot Slack Example ***WORK IN PROGRESS***
 Writing a bot using hubot in javascript that runs server side that integrates with your AWS infrastructure. 
 
 ```
